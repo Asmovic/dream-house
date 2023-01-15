@@ -1,20 +1,27 @@
 import Link from 'next/link';
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Flex, Text } from '@chakra-ui/react';
 
 const Footer = () => (
-    <Box textAlign="center" p="5" color="gray.500" borderTop="1px" borderColor="gray.100">
-        <Text>&copy; 2021 - TajHouse - Made with ❤️ by</Text>
-        <Text 
-            color="blue.300" 
-            cursor="pointer" 
-            title="Twitter" 
-            fontWeight="bold"
-            >
-            <Link href="https://twitter.com/boularbahsmail" passHref target="new tab">    
-            Ismailium
-            </Link>
-        </Text>
-        |
+  <Box
+    textAlign="center"
+    mx="auto"
+    p="5"
+    color="gray.500"
+    borderTop="1px"
+    borderColor="gray.100"
+  >
+    <Flex flexWrap="wrap" justifyContent="center" alignItems="center">
+      <Text>
+        &copy; <span>{new Date().getFullYear()}</span> - DreamHouse - Made with
+        ❤️ by
+      </Text>
+      <Text color="blue.300" cursor="pointer" title="Twitter" fontWeight="bold">
+        <Link href="https://twitter.com/asmoreal" passHref target="new tab">
+          Brainwavee
+        </Link>
+      </Text>
+    </Flex>
+    {/* |
         <Text>Deployed on 
             <Text fontWeight="bold" color="black" title="Vercel">
                 <Link href="https://vercel.com/" passHref target="new tab">    
@@ -29,8 +36,8 @@ const Footer = () => (
                     GitHub
                 </Link>
             </Text>
-        </Text>
-    </Box>
+        </Text> */}
+  </Box>
 );
 
 export default Footer;
